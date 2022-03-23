@@ -5,7 +5,7 @@ import CartScreen from '../screens/CartScreen';
 import UserScreen from '../screens/UserScreen';
 import {AntDesign} from '@expo/vector-icons';
 
-const Tab = createBottomTabNavigator()
+const Tab = createBottomTabNavigator();
 
 
 const TabIcons = {
@@ -16,7 +16,7 @@ const TabIcons = {
 
 export const TabNav = () => {
     return(
-        <Tab.Navigator screenOptions={({route}) => ({
+        <Tab.Navigator tabBarOptions={{showLabel: false}} screenOptions={({route}) => ({
             tabBarIcon: ({size, color}) => {
                 const iconName =  TabIcons[route.name]
                 return <AntDesign name={iconName} size={size} color={color}/>
