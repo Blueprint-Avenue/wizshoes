@@ -1,7 +1,9 @@
 import React, {useContext} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View , FlatList} from 'react-native';
 import { ProductContext } from '../context/Product.context';
 import {ActivityIndicator} from 'react-native-paper';
+import { AppCard } from '../AppCard/AppCard';
+import { AppScreen } from './AppScreen';
 
 const HomeScreen = () => {
 
@@ -17,19 +19,22 @@ const HomeScreen = () => {
         }
 
     return (
-        <View>
+            <AppScreen>
             <View>
-                <Flatlist
+                <Text>Best of AirMax</Text>
+                <FlatList
+                horizontal
+                showsHorizontalScrollIndicator={false}
                 data={products}
                 key={(item) => item.id}
-                renderItem={({item}) => console.log(item.title)}
+                renderItem={({item}) => <AppCard title={item.title} price={item.price} image={item.image} items={item}/>}
                 />
             </View>
-        </View>
+            </AppScreen>
     )
 }
 
-export default HomeScreen
+export default HomeScreen;
 
 const styles = StyleSheet.create({
     prodLoading: {

@@ -3,7 +3,7 @@ export const nike = [
         title:"Nike Air Max 90",
         price: 138,
         id:0,
-        image:"/assets/images/img4/1-1.jpg",
+        image:"https://cdn.flightclub.com/2200/TEMPLATE/246195/1.jpg",
         brand:'Nike',
         colors:["#000e0ff", "#f9ff21", "#107a8b", "d72323"],
         description:"Surplus 'Cargo Khaki'"
@@ -12,7 +12,7 @@ export const nike = [
         title:"Nike Air Max 90",
         price: 589,
         id:1,
-        image:"/assets/images/img4/1-2.jpg",
+        image:"https://cdn.flightclub.com/2200/TEMPLATE/806237/1.jpg",
         brand:'Nike',
         colors:["#000e0ff", "#f9ff21", "#107a8b", "d72323"],
         description:"Off-White X"
@@ -21,7 +21,7 @@ export const nike = [
         title:"Nike Air Max 270",
         price: 128,
         id:2,
-        image:"/assets/images/img4/1-3.jpg",
+        image:"https://cdn.flightclub.com/2200/TEMPLATE/158308/1.jpg",
         brand:'Nike',
         colors:["#000e0ff", "#f9ff21", "#107a8b", "d72323"],
         description:"Comfort With Every Step'"
@@ -30,7 +30,7 @@ export const nike = [
         title:"Nike Air Max 95",
         price: 97,
         id:3,
-        image:"/assets/images/img4/1-4.jpg",
+        image:"https://cdn.flightclub.com/2200/TEMPLATE/278573/1.jpg",
         brand:'Nike',
         colors:["#000e0ff", "#f9ff21", "#107a8b", "d72323"],
         description:"QS 'Japan'"
@@ -39,7 +39,7 @@ export const nike = [
         title:"Nike Air Max 95",
         price: 200,
         id:4,
-        image:"/assets/images/img4/1-5.jpg",
+        image:"https://cdn.flightclub.com/2200/TEMPLATE/181132/1.jpg",
         brand:'Nike',
         colors:["#000e0ff", "#f9ff21", "#107a8b", "d72323"],
         description:"OG Neon"
@@ -48,7 +48,7 @@ export const nike = [
         title:"Nike Air Max Plus",
         price: 148,
         id:5,
-        image:"/assets/images/img4/1-6.jpg",
+        image:"https://cdn.flightclub.com/2200/TEMPLATE/806221/1.jpg",
         brand:'Nike',
         colors:["#000e0ff", "#f9ff21", "#107a8b", "d72323"],
         description:"Hyper Blue"
@@ -57,7 +57,7 @@ export const nike = [
         title:"Nike Air Max Utility",
         price: 199,
         id:6,
-        image:"/assets/images/img4/1-7.jpg",
+        image:"https://cdn.flightclub.com/2200/TEMPLATE/146966/1.jpg",
         brand:'Nike',
         colors:["#000e0ff", "#f9ff21", "#107a8b", "d72323"],
         description:"Desert ORE"
@@ -66,7 +66,7 @@ export const nike = [
         title:"Nike Air Foamposite",
         price: 148,
         id:6,
-        image:"/assets/images/img4/1.jpg",
+        image:"https://cdn.flightclub.com/2200/TEMPLATE/182951/1.jpg",
         brand:'Nike',
         colors:["#000e0ff", "#f9ff21", "#107a8b", "d72323"],
         description:"Pro USA"
