@@ -30,8 +30,8 @@ export const AppCard = ({title, price, image, items, onPress}) => {
 
 const style = StyleSheet.create({
     card: {
-        width: 290,
-        backgroundColor: 'red',
+        width: 400,
+        backgroundColor: '#607D8B',
         paddingBottom: 10,
         marginHorizontal: 5,
         borderRadius: 10,
@@ -51,9 +51,13 @@ const style = StyleSheet.create({
     title: {
         fontSize: 20,
         fontWeight: '500',
+        color: '#eee',
+        fontFamily: 'Lato_400Regular'
     },
     price: {
         fontSize: 24,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        color: '#eee',
+
     }
 });

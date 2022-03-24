@@ -4,7 +4,7 @@ import Constant from 'expo-constants';
 
 export const AppScreen =({style, children}) => {
     return (
-        <SafeAreaView style={styles.screen}>
+        <SafeAreaView style={[styles.screen, {...style}]}>
             {children}
         </SafeAreaView>
     )

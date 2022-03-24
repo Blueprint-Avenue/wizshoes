@@ -5,7 +5,7 @@ import {ActivityIndicator} from 'react-native-paper';
 import { AppCard } from '../AppCard/AppCard';
 import { AppScreen } from './AppScreen';
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
 
     const {isLoading, products} = useContext(ProductContext);
 
@@ -27,7 +27,7 @@ const HomeScreen = () => {
                 showsHorizontalScrollIndicator={false}
                 data={products}
                 key={(item) => item.id}
-                renderItem={({item}) => <AppCard title={item.title} price={item.price} image={item.image} items={item}/>}
+                renderItem={({item}) => <AppCard title={item.title} price={item.price} image={item.image} items={item} onPress={() => navigation.navigate("Details", {product: item})}/>}
                 />
             </View>
             </AppScreen>

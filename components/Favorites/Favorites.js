@@ -14,7 +14,7 @@ export const Favorite = ({product}) => {
 
     return(
         <TouchableOpacity style={style.faves} onPress={() => !isSaved ? add(product) : remove(product)}>
-            <AntDesign size={40} color={!isSaved ? 'blue' : 'purple'} name={!isSaved ? 'hearto' : 'heart'}/>
+            <AntDesign size={40} color={!isSaved ? '#607D8B' : '#607D8B'} name={!isSaved ? 'hearto' : 'heart'}/>
         </TouchableOpacity>
     )
 }
