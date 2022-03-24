@@ -1,12 +1,11 @@
 import React from 'react';
 import { Image, Text, TouchableOpacity, View, StyleSheet } from 'react-native';
 import {AntDesign} from '@expo/vector-icons';
-import { Favorite } from '../Favorites/Favorites';
+
 
 export const AppCard = ({title, price, image, items, onPress}) => {
     return (
         <TouchableOpacity onPress={onPress} style={style.card}>
-            <Favorite products={items}  />
             <View style={style.imageContainer}>
                 <Image source={{uri: image}} style={{height:"100%", width: "100%"}} />
             </View>

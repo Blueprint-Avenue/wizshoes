@@ -2,13 +2,17 @@ import React from 'react';
 import { StyleSheet, Text, View} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { Button, List } from 'react-native-paper'
+import { useDispatch } from 'react-redux';
 import { AppCard } from '../AppCard/AppCard';
 import { AppScreen } from './AppScreen';
+import { ADD_TO_CART, REMOVE_FROM_CART } from '../../redux/CartItem';
 
 const DetailsScreen = ({route}) => {
-    const {product} = route.params
+    const {item} = route.params
 
+    const dispatch = useDispatch();
 
+    const addItemToCart = item => dispatch({type: ADD_TO_CART, payload:item})
 
     return (
         <AppScreen>
@@ -17,19 +21,19 @@ const DetailsScreen = ({route}) => {
                 <AppCard
                 style={style.card}
                 imgContainer={style.imgContainer}
-                title={product.title}
-                price={product.price}
-                image={product.image}
-                items={product} />
+                title={item.title}
+                price={item.price}
+                image={item.image}
+                items={item} />
             </View>
             <View style={style.btnContainer}>
-                <Button icon="shopping" color="#263238" mode="contained" style={style.btn}>Add To WizCart</Button>
+                <Button icon="shopping" color="#263238" onPress={() => addItemToCart(item)} mode="contained" style={style.btn}>Add To WizCart</Button>
             </View>
-            <List.Section title={`${product.title} Details`}>
+            <List.Section title={`${item.title} Details`}>
                 <List.Accordion
                 title="Product Information"
                 left={() => <List.Icon icon="information"/>}>
-                <List.Item description={product.description} />
+                <List.Item description={item.description} />
                 </List.Accordion>
                 <List.Accordion
                 title="Ratings"
@@ -42,7 +46,7 @@ const DetailsScreen = ({route}) => {
     )
 }
 
-export default DetailsScreen
+export default DetailsScreen;
 
 const style = StyleSheet.create({
     card: {

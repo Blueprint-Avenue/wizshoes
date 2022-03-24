@@ -7,7 +7,7 @@ import { AppScreen } from './AppScreen';
 
 const HomeScreen = ({navigation}) => {
 
-    const {isLoading, products} = useContext(ProductContext);
+    const {isLoading, item} = useContext(ProductContext);
 
         if(isLoading){
             return(
@@ -23,11 +23,11 @@ const HomeScreen = ({navigation}) => {
             <View>
                 <Text>Best of AirMax</Text>
                 <FlatList
-                horizontal
-                showsHorizontalScrollIndicator={false}
-                data={products}
+                // horizontal
+                // showsHorizontalScrollIndicator={false}
+                data={item}
                 key={(item) => item.id}
-                renderItem={({item}) => <AppCard title={item.title} price={item.price} image={item.image} items={item} onPress={() => navigation.navigate("Details", {product: item})}/>}
+                renderItem={({item}) => <AppCard title={item.title} price={item.price} image={item.image} items={item} onPress={() => navigation.navigate("Details", {item: item})}/>}
                 />
             </View>
             </AppScreen>

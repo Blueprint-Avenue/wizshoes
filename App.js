@@ -1,9 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { ProductContextProvider } from './components/context/Product.context';
-import { FavoriteContextProvider } from './components/context/Favorite.context';
 import { AppNavigation } from './components/navigations';
-import {useFonts as useLato, Lato_400Regular} from '@expo-google-fonts/lato'
+import { useFonts as useLato, Lato_400Regular } from '@expo-google-fonts/lato'
+import { Provider } from 'react-redux';
+import store  from './redux/store';
 
 export default function App() {
 
@@ -11,16 +12,17 @@ export default function App() {
     Lato_400Regular
   });
 
-  if(!latoFont){
+  if (!latoFont) {
     return null
   }
 
   return (
-    <FavoriteContextProvider>
-      <ProductContextProvider>
-        <AppNavigation />
-      </ProductContextProvider>
-    </FavoriteContextProvider>
+    <Provider store={store}>
+        <ProductContextProvider>
+          <AppNavigation />
+        </ProductContextProvider>
+    </Provider>
+
 
   );
 }

@@ -1,6 +1,5 @@
 import React, { createContext, useState } from 'react';
-import {nike} from '../shared/NikeProducts';
-
+import { nike } from '../../shared/Products';
 
 export const ProductContext = createContext();
 
@@ -16,7 +15,7 @@ export const ProductContextProvider = ({children}) => {
         <ProductContext.Provider
             value={{
                 isLoading,
-                products: nike
+                item: nike
             }}
         >
             {children}

@@ -9,7 +9,7 @@ export const Favorite = ({product}) => {
     const {add, remove, isFavored} = useContext(FavoriteContext)
 
     // check if favorite is already saved
-    const isSaved = isFavored.find(e => e.id === product.id)
+    const isSaved = isFavored.find( faves => faves.id === product.id)
 
 
     return(
