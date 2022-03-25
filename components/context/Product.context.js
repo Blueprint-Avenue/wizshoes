@@ -1,5 +1,6 @@
 import React, { createContext, useState } from 'react';
 import { nike } from '../../shared/Products';
+import { jordan } from '../../shared/BonusProducts';
 
 export const ProductContext = createContext();
 

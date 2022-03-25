@@ -56,7 +56,7 @@ const style = StyleSheet.create({
         borderRadius: 5
     },
     imgContainer: {
-        height:330
+        height:'330'
     },
     btnContainer: {
         padding: 10

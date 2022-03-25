@@ -1,14 +1,16 @@
 import React from 'react';
-import { StyleSheet, Text, View, FlatList, Image } from 'react-native';
+import { StyleSheet, Text, View, FlatList, Image, TouchableOpacity } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { AppScreen } from './AppScreen';
-import { CartItems } from '../cartItems.js/CartItems';
 import { Button } from 'react-native-paper';
-import { ADD_TO_CART, REMOVE_FROM_CART } from '../../redux/CartItem';
+import { ADD_TO_CART, REMOVE_FROM_CART, ADJUST_QTY } from '../../redux/CartItem';
 import { IconButton } from '../iconButton/IconButton';
 
+function Separator() {
+    return <View style={{ borderBottomWidth: 1, borderBottomColor: '#a9a9a9' }} />
+  }
 
-const CartScreen = () => {
+function CartScreen () {
     const cartItems = useSelector(state => state)
     const dispatch = useDispatch()
 
@@ -21,10 +23,12 @@ const CartScreen = () => {
 
     return (
         <View style={style.container}>
+            {cartItems.length !== 0 ? (
             <AppScreen style={{flex:1}}>
                 <FlatList
                 data={cartItems}
                 keyExtractor={(item) => item.id.toString()}
+                ItemSeparatorComponent={() => Separator()}
                 renderItem={({item}) =>(
                     <View style={style.cartContainer}>
                         <View>
@@ -33,25 +37,29 @@ const CartScreen = () => {
                        <View style={style.body}>
                             <Text style={style.title}>{item.title}</Text>
                             <Text style={style.price}>${item.price}</Text>
-                            <Text style={style.totalAmount}>${}</Text>
                        </View>
                        <View style={style.rightContent}>
-                           <IconButton iconName='minus' size={40} onPress={() => removeItemFromCart(item)}/>
-                            <Text style={style.qty}>{}</Text>
-                            <IconButton iconName='plus'size={40} backgroundColor='#6555' color="#000"/>
+                       <TouchableOpacity
+                      onPress={() => removeItemFromCart(item)}
+                      style={style.button}>
+                      <Text style={style.buttonText}>Remove -</Text>
+                    </TouchableOpacity>
                        </View>
                     </View>
-                )
-            }
+                )}
                 />
+
             <View style={style.bottomContent}>
-                <Text style={style.bottomText}>Total Amount :${Math.floor()}</Text>
                 <Button icon="cart" color="#eee" style={{backgroundColor: '#000', padding:10}}>
                     <Text>CHECKOUT</Text>
                 </Button>
             </View>
-
             </AppScreen>
+             ) : (
+                <View style={style.emptyCartContainer}>
+                <Text style={style.emptyCartMessage}>Your cart is empty :'(</Text>
+              </View>
+            )}
         </View>
     )
 }
@@ -122,5 +130,23 @@ const style = StyleSheet.create({
         fontSize: 18,
         fontFamily: 'Lato_400Regular',
         fontWeight: '600'
-    }
+    },
+    emptyCartContainer: {
+        marginTop: 250,
+        justifyContent: 'center',
+        alignItems: 'center'
+      },
+      emptyCartMessage: {
+        fontSize: 28
+      }
+      ,
+    button: {
+      borderRadius: 8,
+      backgroundColor: '#ff333390',
+      padding: 5
+    },
+    buttonText: {
+      fontSize: 22,
+      color: '#fff'
+    },
 });

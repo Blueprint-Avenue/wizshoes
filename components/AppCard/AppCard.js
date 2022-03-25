@@ -13,7 +13,7 @@ export const AppCard = ({title, price, image, items, onPress}) => {
             <View style={style.cardBody}>
                 <View style={style.cardContent}>
                 <Text style={style.title}>{title}</Text>
-                <Text style={style.price}>{price}</Text>
+                <Text style={style.price}>${price}</Text>
                 </View>
                 <View style={{flexDirection: 'row'}}>
                     <AntDesign name="star" size={18} color='gold' />
@@ -29,14 +29,14 @@ export const AppCard = ({title, price, image, items, onPress}) => {
 
 const style = StyleSheet.create({
     card: {
-        width: 400,
+        width: 375,
         backgroundColor: '#607D8B',
         paddingBottom: 10,
-        marginHorizontal: 5,
+        marginHorizontal: 20,
         borderRadius: 10,
     },
     imageContainer: {
-        height: 200
+        height: 300
     },
     cardBody: {
         padding: 10,

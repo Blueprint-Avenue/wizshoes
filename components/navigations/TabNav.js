@@ -5,6 +5,7 @@ import CartScreen from '../screens/CartScreen';
 import UserScreen from '../screens/UserScreen';
 import {AntDesign} from '@expo/vector-icons';
 import { StackNav } from "./StackNav";
+import ShoppingCartIcon from "../cartItems.js/ShoppingCartIcon";
 
 const Tab = createBottomTabNavigator();
 
@@ -12,7 +13,7 @@ const Tab = createBottomTabNavigator();
 const TabIcons = {
     Home: 'home',
     Cart: 'shoppingcart',
-    User: 'user'
+    About: 'user'
 }
 
 export const TabNav = () => {
@@ -23,9 +24,9 @@ export const TabNav = () => {
                 return <AntDesign name={iconName} size={size} color={color}/>
             }
         })}>
-            <Tab.Screen name="Home" component={StackNav}/>
+            <Tab.Screen name="Home" component={StackNav} options={{ headerRight: props => <ShoppingCartIcon {...props}/> }}/>
             <Tab.Screen name="Cart" component={CartScreen}/>
-            <Tab.Screen name="User" component={UserScreen}/>
+            <Tab.Screen name="About" component={UserScreen}/>
         </Tab.Navigator>
     )
 }
