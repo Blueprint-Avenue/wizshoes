@@ -16,11 +16,11 @@ export const AppCard = ({title, price, image, items, onPress}) => {
                 <Text style={style.price}>${price}</Text>
                 </View>
                 <View style={{flexDirection: 'row'}}>
-                    <AntDesign name="star" size={18} color='gold' />
-                    <AntDesign name="star" size={18} color='gold' />
-                    <AntDesign name="star" size={18} color='gold' />
-                    <AntDesign name="star" size={18} color='gold' />
-                    <AntDesign name="star" size={18} color='gold' />
+                    <AntDesign name="star" size={18} color='#AB6D23' />
+                    <AntDesign name="star" size={18} color='#AB6D23' />
+                    <AntDesign name="star" size={18} color='#AB6D23' />
+                    <AntDesign name="star" size={18} color='#AB6D23' />
+                    <AntDesign name="star" size={18} color='#AB6D23' />
                 </View>
             </View>
         </TouchableOpacity>
@@ -30,10 +30,11 @@ export const AppCard = ({title, price, image, items, onPress}) => {
 const style = StyleSheet.create({
     card: {
         width: 375,
-        backgroundColor: '#607D8B',
+        backgroundColor: '#51050F',
         paddingBottom: 10,
         marginHorizontal: 20,
         borderRadius: 10,
+        marginBottom: 25
     },
     imageContainer: {
         height: 300
@@ -50,13 +51,13 @@ const style = StyleSheet.create({
     title: {
         fontSize: 20,
         fontWeight: '500',
-        color: '#eee',
+        color: '#F5F5F5',
         fontFamily: 'Lato_400Regular'
     },
     price: {
         fontSize: 24,
         fontWeight: 'bold',
-        color: '#eee',
+        color: '#F5F5F5',
 
     }
 });

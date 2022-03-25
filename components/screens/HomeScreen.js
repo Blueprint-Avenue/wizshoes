@@ -25,11 +25,11 @@ const HomeScreen = ({navigation}) => {
         }
 
     return (
-        <ScrollView>
+        <ScrollView style={styles.container}>
             <KickCarousel/>
             <AppScreen>
             <View>
-                <Text style={styles.headerOne}> 'The Best Of Wiz'</Text>
+                <Text style={styles.headerOne}> The Best Of Wiz </Text>
                 <FlatList
                 // horizontal
                 // showsHorizontalScrollIndicator={false}
@@ -52,12 +52,19 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center'
     },
+    container: {
+        flex: 1,
+        backgroundColor: '#AB6D23',
+    },
     headerOne: {
         flexDirection: 'row',
-        fontSize: 45,
+        fontSize: 43,
         fontWeight:'500',
         alignItems: 'center',
         justifyContent: 'center',
         marginHorizontal: 30,
+        color:'#F5F5F5',
+        marginBottom: 30,
+        textTransform:'uppercase'
     }
 });

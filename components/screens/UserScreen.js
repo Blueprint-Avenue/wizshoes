@@ -10,14 +10,14 @@ import About from '../../shared/About';
 
 function AboutWiz(props) {
     return (
-        <Card title={"About Our Community"} wrapperStyle={{ margin: 20 }}>
+        <Card title={"About Our Community"}  style={styles.cardStyle} wrapperStyle={{ margin: 20 }}>
             <Text style={{ marginBottom: 10 }}>Established in Los Angeles over 8 years ago, WizKicks revolutionized sneaker retail as the original consignment store for rare shoes geared toward the smaller feet crowd. Carrying the rarest exclusives and collectible sneakers, WizKicks has evolved from a one-stop sneaker destination, to a cultural hub for sneaker enthusiasts and novices alike. WizKicks remains the premier source for authentic, rare sneakers.</Text>
             <TouchableOpacity onPress={() => Linking.openURL('https://www.flightclub.com/about-us')}>
-            <Image
-            source={{uri:'https://www.flightclub.com/static/staticPages/about-us.png'}}
-            style={{width: 400, height: 400, resizeMode: 'contain'}}
-         />
-         </TouchableOpacity>
+                <Image
+                    source={{ uri: 'https://www.flightclub.com/static/staticPages/about-us.png' }}
+                    style={{ width: 400, height: 400, resizeMode: 'contain' }}
+                />
+            </TouchableOpacity>
         </Card>
 
     )
@@ -38,17 +38,22 @@ class UserScreen extends Component {
             <ScrollView style={styles.container}>
                 <Animatable.View animation='fadeInDown' duration={2000} delay={1000}>
                     <AboutWiz />
-                    <Card title={"Contact Information"} wrapperStyle={{ margin: 20 }}>
-                        <Text>3343 Peachtree Rd NE Ste 145-740</Text>
-                        <Text>Atlanta, GA 30326</Text>
-                        <Text style={{ marginBottom: 10 }}>U.S.A.</Text>
-                        <Text>
+                    <Card title={"Contact Us"} style={styles.cardStyle} wrapperStyle={{ margin: 20 }}>
+                    <Text style={styles.headerOne}>We Are Available 7 Days A Week</Text>
+                        <Image
+                            source={{ uri:'https://www.wearebasket.net/wp-content/uploads/2017/11/unnamed-file.jpg' }}
+                            style={{ width: 400, height:400, resizeMode: 'contain' }}
+                        />
+                        <Text style={styles.baseText}>3343 Peachtree Rd NE Ste 145-740</Text>
+                        <Text style={styles.baseText}>Atlanta, GA 30326</Text>
+                        <Text style={styles.USA}>U.S.A.</Text>
+                        <Text style={styles.baseText}>
                             Email:
-                            DaWiz@Wiz3rdKicks.com
+                            DaWizCustomerCare@Wiz3rdKicks.com
                         </Text>
                         <Button
                             title="Send Email"
-                            buttonStyle={{ backgroundColor: '#085E7D', margin: 40 }}
+                            buttonStyle={{ backgroundColor: '#51050F', margin: 40 }}
                             icon={<Icon
                                 name='rocket'
                                 type='font-awesome'
@@ -67,11 +72,41 @@ class UserScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#008E89',
+        backgroundColor: '#AB6D23',
         paddingTop: 15,
     },
-    Text: {
-        fontFamily: ''
+    baseText: {
+        fontWeight:'bold',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginHorizontal: 30,
+        color: '#51050F',
+        fontSize: 16,
+        fontWeight:'400',
+    },
+    USA: {
+        fontWeight:'bold',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginHorizontal: 30,
+        color: '#51050F',
+        fontSize: 16,
+        fontWeight:'400',
+        marginBottom:10
+    },
+    headerOne: {
+        flexDirection: 'row',
+        fontSize: 16,
+        fontWeight:'bold',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginHorizontal: 30,
+        color: '#51050F'
+    },
+    cardStyle: {
+        color: '#51050F',
+        fontSize: 16,
+        fontWeight:'bold',
     }
 });
 

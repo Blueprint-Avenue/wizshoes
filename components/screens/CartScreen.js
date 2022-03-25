@@ -42,7 +42,7 @@ function CartScreen () {
                        <TouchableOpacity
                       onPress={() => removeItemFromCart(item)}
                       style={style.button}>
-                      <Text style={style.buttonText}>Remove -</Text>
+                      <Text style={style.buttonText}>-</Text>
                     </TouchableOpacity>
                        </View>
                     </View>
@@ -50,7 +50,7 @@ function CartScreen () {
                 />
 
             <View style={style.bottomContent}>
-                <Button icon="cart" color="#eee" style={{backgroundColor: '#000', padding:10}}>
+                <Button icon="cart" color="#F5F5F5" style={{backgroundColor: '#51050F', padding:10}}>
                     <Text>CHECKOUT</Text>
                 </Button>
             </View>
@@ -70,7 +70,9 @@ export default CartScreen;
 
 const style = StyleSheet.create({
     container: {
-        flex: 1
+        flex: 1,
+        backgroundColor: '#AB6D23',
+        paddingTop: 15,
     },
     bottomContent: {
         position: 'absolute',
@@ -86,22 +88,22 @@ const style = StyleSheet.create({
         fontSize: 20,
         fontFamily: 'Lato_400Regular',
         fontWeight: '600',
-        color: '#000'
+        color: '#F5F5F5'
     },
     cartContainer:{
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: '#323232',
+        backgroundColor: '#51050F',
         padding:10
     },
     imgContainer:{
-        height: 60,
-        width: 60,
+        height: 110,
+        width: 110,
         marginRight: 16
     },
     image: {
-        width: '100%',
-        height:'100%',
+        width: '300',
+        height:'300',
     },
     body: {
         flex: 2,
@@ -118,13 +120,14 @@ const style = StyleSheet.create({
         fontSize: 18,
         fontFamily: 'Lato_400Regular',
         fontWeight: '600',
-        color: 'black'
+        color: '#F5F5F5'
     },
     price: {
         fontSize: 16,
         fontWeight: '600',
         fontFamily: 'Lato_400Regular',
-        marginVertical: 5
+        marginVertical: 5,
+        color: '#F5F5F5'
     },
     totalAmount:{
         fontSize: 18,
@@ -137,13 +140,14 @@ const style = StyleSheet.create({
         alignItems: 'center'
       },
       emptyCartMessage: {
-        fontSize: 28
+        fontSize: 45,
+        color: '#51050F'
       }
       ,
     button: {
-      borderRadius: 8,
-      backgroundColor: '#ff333390',
-      padding: 5
+      borderRadius: 10,
+      backgroundColor: '#AB6D23',
+      padding: 10
     },
     buttonText: {
       fontSize: 22,

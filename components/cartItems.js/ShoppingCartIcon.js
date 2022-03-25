@@ -15,7 +15,7 @@ function ShoppingCartIcon() {
       <View style={styles.itemCountContainer}>
         <Text style={styles.itemCountText}>{cartItems.length}</Text>
       </View>
-      <Ionicons name='ios-cart' size={32} color='#101010' />
+      <Ionicons name='ios-cart' size={32} color='#F5F5F5' />
     </TouchableOpacity>
   )
 }
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     height: 30,
     width: 30,
     borderRadius: 15,
-    backgroundColor: '#FF7D7D',
+    backgroundColor: '#AB6D23',
     right: 22,
     bottom: 10,
     alignItems: 'center',

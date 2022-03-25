@@ -27,17 +27,17 @@ const DetailsScreen = ({route}) => {
                 items={item} />
             </View>
             <View style={style.btnContainer}>
-                <Button icon="shopping" color="#263238" onPress={() => addItemToCart(item)} mode="contained" style={style.btn}>Add To WizCart</Button>
+                <Button icon="shopping" color="#51050F" onPress={() => addItemToCart(item)} mode="contained" style={style.btn}>Add To WizCart</Button>
             </View>
             <List.Section title={`${item.title} Details`}>
                 <List.Accordion
                 title="Product Information"
-                left={() => <List.Icon icon="information"/>}>
-                <List.Item description={item.description} />
+                left={() => <List.Icon color="#51050F" icon="information"/>}>
+                <List.Item  description={item.description} />
                 </List.Accordion>
                 <List.Accordion
                 title="Ratings"
-                left={() => <List.Icon icon="star"/>}>
+                left={() => <List.Icon color="#51050F" icon="star"/>}>
                 <List.Item title="5/5" />
                 </List.Accordion>
             </List.Section>
@@ -50,7 +50,7 @@ export default DetailsScreen;
 
 const style = StyleSheet.create({
     card: {
-        backgroundColor: '#263238',
+        backgroundColor: '#AB6D23',
         width: '100%',
         marginHorizontal: 0,
         borderRadius: 5
@@ -59,9 +59,11 @@ const style = StyleSheet.create({
         height:'330'
     },
     btnContainer: {
-        padding: 10
+        padding: 10,
+        color:'#F5F5F5'
     },
     btn: {
-        padding: 10
+        padding: 10,
+        color:'#F5F5F5'
     }
 });

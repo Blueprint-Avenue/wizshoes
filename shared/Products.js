@@ -33,7 +33,7 @@ export const nike = [
         image:"https://cdn.flightclub.com/1000/TEMPLATE/011523/1.jpg",
         brand:'Air Jordan',
         colors:["#000e0ff", "#f9ff21", "#107a8b", "d72323"],
-        description:"The build is mostly true to the original, featuring a white tumbled leather upper with contrasting black hits on the collar, tongue and midsole."
+        description:"The build is mostly true to the original, featuring a white tumbled leather."
     },
     {
         title:"Nike Air Max 95",
@@ -51,7 +51,7 @@ export const nike = [
         image:"https://cdn.flightclub.com/1000/TEMPLATE/140232/1.jpg",
         brand:'Adidas',
         colors:["#000e0ff", "#f9ff21", "#107a8b", "d72323"],
-        description:"The Yeezy Boost 350 V2 GID 'Glow' features a glow-in-the-dark finish throughout its Primeknit upper. "
+        description:"Features includes a glow-in-the-dark finish throughout its Primeknit upper. "
     },
     {
         title:"Air Jordan 4 Retro'Bred",
@@ -60,7 +60,7 @@ export const nike = [
         image:"https://cdn.flightclub.com/2200/TEMPLATE/011844/1.jpg",
         brand:'Air Jordan',
         colors:["#000e0ff", "#f9ff21", "#107a8b", "d72323"],
-        description:"The design is faithful to the original, featuring a stitched white leather upper with metallic gold eyelets and textured black leather overlays."
+        description:"Featuring a stitched white leather upper with metallic gold eyelets."
     },
     {
         title:"Nike Air Foamposite",
